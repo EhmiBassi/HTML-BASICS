@@ -5,30 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+      body {
+       background-color: rgba(240, 255, 255, 0.788);
+      }
+      input:not(#male) {
+        width: 90%;
+      }
+      input:not(#female) {
+        width: 90%;
+      }
+      fieldset {
+        width: 60%;
+      }
+      #female {
+        text-align: left;
+        position: relative;
+      }
+      #male {
+          text-align: left;
+        position: relative;
+      }
 </head>
 <body>
     <h1>BIODATA FORM</h1>
-    <form>
+    <form id="myform" action="/">
       <fieldset>
         <legend>Fill in your Biodata</legend>
-        <label for="fullname">Name:</label>
+        <label for="fullname">Name:</label><br/>
         <input type="text" name="fullname" id="fullname" placeholder="Fullname" required/>
         <br/>
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email"  placeholder="Email address" required/>
+        <label for="email">Email:</label><br/>
+        <input type="email" name="email" id="email" placeholder="Email address" required/>
         <br/>
-        <label for="phone">Phone Number:</label>
+        <label for="phone">Phone Number:</label><br/>
         <input type="tel" name="phone" id="phone" placeholder="phone number" required/>
         <br/>
-        <label for="male">Male:</label>
+        <label for="male">Male:</label><br/>
         <input type="radio" name="gender" id="male" value="male" required/>
-        <label for="female">Female:</label>
+        <label for="female">Female:</label><br/>
         <input type="radio" name="gender" id="female" value="female" required/>
         <br/>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" placeholder="password" required/><br/>
-        <button type="button" onclick="alert('Form submitted successfully')">Submit</button>
+        <label for="password">Password:</label><br/>
+        <input type="password" name="password" id="password" placeholder="password" required/>
+        <br/>
+        <input type="submit" class="submit" value="submit">
       </fieldset>
     </form>
+     <script>
+      document.getElementById("myform").onsubmit =function() {myfunction()};
+
+      function myfunction() {
+        alert("Form submitted succesfully");
+      }
+    </scrip
 </body>
 </html>
